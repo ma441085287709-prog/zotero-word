@@ -1,0 +1,43 @@
+{
+  "schema": "zotero-word.release-status.v1",
+  "version": "2.4.4",
+  "build": "direct-save.2-handoff.1",
+  "channel": "customer-release",
+  "release_date": "2026-11-20",
+  "base_package": "zotero-word-macos-2.4.3-direct-save.2-handoff.1.zip",
+  "base_package_sha256": "6a9691b56353220ecd5c10833fa364bf9acbda70a504134370a5b37854fd9c36",
+  "variant": "macos",
+  "adapters": [
+    "codex-macos",
+    "deepseek-harness-macos"
+  ],
+  "validation": {
+    "scope": "zotero_refresh_word_save_close",
+    "result": "NOT_RUN_AT_USER_REQUEST",
+    "native_validation_verified": false
+  },
+  "packaging": {
+    "runtime_matches_base_package": true,
+    "new_native_tests_run": false,
+    "macos_zotero_transport_matches_base_package": true,
+    "macos_native_preferences_readiness": "2026-11-19 runtime fix",
+    "macos_word_applescript_matches_base_package": true
+  },
+  "historical_validation": {
+    "package": "zotero-word-macos-2.4.0.zip",
+    "scope": "dynamic_citations_and_bibliography",
+    "result": "COMPLETE",
+    "native_refresh_observed": true,
+    "native_validation_verified": true,
+    "sample_verification": "verified"
+  },
+  "prior_validation": {
+    "scope": "zotero_refresh_word_save_close",
+    "result": "COMPLETE",
+    "native_validation_verified": false,
+    "native_refresh_observed": true,
+    "word_window": "closed",
+    "note": "Codex completed the base build in 28.098 seconds with 44 citations and 41 bibliography entries.",
+    "package": "zotero-word-macos-2.4.3-direct-save.2-final.zip"
+  }
+}

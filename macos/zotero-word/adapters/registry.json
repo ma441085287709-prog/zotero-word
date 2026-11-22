@@ -1,0 +1,30 @@
+{
+  "schema": "zotero-word.adapter-registry.v1",
+  "distribution": {
+    "version": "2.4.4",
+    "variant": "macos",
+    "test_status": "NOT_RUN_AT_USER_REQUEST"
+  },
+  "authored_adapters": [
+    {
+      "id": "codex-macos",
+      "agent_host": "codex",
+      "application_os": "macos",
+      "instructions": "codex-macos.md",
+      "core_launcher": "../core/scripts/zotero_docx.py",
+      "native_executor": "../core/scripts/mac_desktop.py",
+      "verification_scope": "SHARED_MACOS_WORKFLOW"
+    },
+    {
+      "id": "deepseek-harness-macos",
+      "agent_host": "deepseek-harness",
+      "application_os": "macos",
+      "instructions": "deepseek-harness-macos.md",
+      "core_launcher": "../core/scripts/zotero_docx.py",
+      "native_executor": "../core/scripts/mac_desktop.py",
+      "verification_scope": "HOST_VALIDATION_PENDING"
+    }
+  ],
+  "release_status": "../release-status.json",
+  "local_connection_policy": "../core/local-connections.md"
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "zotero-word 2.4.4 windows"
+  short_description: "按期刊样式刷新动态引文，保存并关闭工作副本后交付"
+  default_prompt: "使用 $zotero-word 在 Windows 上按目标期刊整理这份 Word 稿件的动态引文和 References。保留原稿，在工作副本刷新、保存并关闭后交付。有上次的运行目录时从已完成的步骤继续。"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "zotero-word 2.4.4  mac"
+  short_description: "在独立 Word 副本整理 Zotero 引文，刷新后保存关闭并交付"
+  default_prompt: "使用 $zotero-word 按目标期刊整理这份 Word 稿件的动态引文与 References，保留原稿并交付 Zotero 已刷新、Word 已保存关闭的工作副本。"

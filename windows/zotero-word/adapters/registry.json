@@ -1,0 +1,85 @@
+{
+  "schema": "zotero-word.adapter-registry.v1",
+  "distribution": {
+    "version": "2.4.4",
+    "build": "direct-save.2-handoff.1-dispatch-fixed",
+    "channel": "customer-release",
+    "variant": "windows-unified",
+    "test_status": "NOT_RUN_AT_USER_REQUEST"
+  },
+  "selection": "Codex and DeepSeek use the same interactive Windows desktop executor.",
+  "host_selection": {
+    "module": "../core/scripts/host_adapter.py",
+    "instructions": "host-selection.md",
+    "context_schema": "zotero-word.host-context.v1",
+    "routes": {
+      "codex": "codex-windows",
+      "deepseek-harness": "deepseek-harness-windows",
+      "deepseek-local-agent": "deepseek-harness-windows"
+    },
+    "unknown_host": "HOLD_NO_DEFAULT",
+    "run_binding": "Original, snapshot and unique working copy; native document identity checked by Word and Zotero"
+  },
+  "implemented": [],
+  "authored_adapters": [
+    {
+      "id": "codex-windows",
+      "agent_host": "Codex Windows agent host",
+      "application_os": "windows",
+      "implementation_status": "authored_not_tested",
+      "instructions": "codex-windows.md",
+      "runtime": "windows-runtime.md",
+      "native_actions": "windows-native.md",
+      "capabilities_required": [
+        "local_files",
+        "windows_python",
+        "interactive_windows_desktop",
+        "winword_integration"
+      ],
+      "core_launcher": "../scripts/Invoke-Core.ps1",
+      "verification_scope": "AWAITING_WINDOWS_CUSTOMER_VALIDATION",
+      "permissions": "Actively discover, connect and call local Word/Zotero and existing APIs for the authorized task. Prepare reversible task-scoped connections within existing authority. For genuinely new software, credentials, access scope or OS approval, state the exact action and obtain only the missing approval; never reinterpret this as a permanent local-call ban. No fake native success.",
+      "agent_hosts": [
+        "codex"
+      ],
+      "host_selection": "host-selection.md",
+      "local_connection_policy": "../core/local-connections.md",
+      "native_executor": "../scripts/Invoke-WordZotero.ps1"
+    },
+    {
+      "id": "deepseek-harness-windows",
+      "agent_host": "DeepSeek local tool-enabled Windows agent/Harness",
+      "application_os": "windows",
+      "implementation_status": "authored_not_tested",
+      "instructions": "deepseek-harness-windows.md",
+      "runtime": "windows-runtime.md",
+      "native_actions": "windows-native.md",
+      "capabilities_required": [
+        "local_files",
+        "windows_python",
+        "interactive_windows_desktop",
+        "winword_integration"
+      ],
+      "core_launcher": "../scripts/Invoke-Core.ps1",
+      "verification_scope": "AWAITING_WINDOWS_CUSTOMER_VALIDATION",
+      "permissions": "Actively discover, connect and call local Word/Zotero and existing APIs for the authorized task. Prepare reversible task-scoped connections within existing authority. For genuinely new software, credentials, access scope or OS approval, state the exact action and obtain only the missing approval; never reinterpret this as a permanent local-call ban. No fake native success.",
+      "agent_hosts": [
+        "deepseek-harness",
+        "deepseek-local-agent"
+      ],
+      "host_selection": "host-selection.md",
+      "local_connection_policy": "../core/local-connections.md",
+      "native_executor": "../scripts/Invoke-WordZotero.ps1"
+    }
+  ],
+  "windows": "Both local hosts use the same packaged Windows desktop entry point.",
+  "experimental_host_mappings": [],
+  "planned_targets": [
+    {
+      "agent_host": "Other unknown hosts or cloud/mobile-only chat interfaces",
+      "implementation_status": "not_implemented",
+      "next_requirement": "Discover actual local execution and Windows native capabilities without inferring them from a model provider."
+    }
+  ],
+  "local_connection_policy": "../core/local-connections.md"
+}

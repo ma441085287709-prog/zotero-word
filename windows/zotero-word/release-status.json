@@ -1,0 +1,26 @@
+{
+  "schema": "zotero-word.release-status.v1",
+  "version": "2.4.4",
+  "channel": "customer-release",
+  "release_date": "2026-11-20",
+  "variant": "windows-unified",
+  "base_package": "zotero-word-windows-2.4.3-direct-save.2-handoff.1-dispatch-fixed.zip",
+  "base_package_sha256": "3b9d07382d31f6ef7b7e71782ddd61e76c79a1d1260a1e484405bf1d6170b5b7",
+  "adapters": [
+    "codex-windows",
+    "deepseek-harness-windows"
+  ],
+  "validation": {
+    "scope": "zotero_refresh_word_save_close",
+    "windows_native": "NOT_RUN_AT_USER_REQUEST",
+    "windows_tests_run": false
+  },
+  "desktop": {
+    "word": "Windows COM",
+    "zotero": "WinWord",
+    "library_read": "local_api_with_native_fallback",
+    "separate_zotero_extension_required": false
+  },
+  "build": "direct-save.2-handoff.1-dispatch-fixed",
+  "workflow_reference": "zotero-word-macos-2.4.3-direct-save.2-handoff.1"
+}
